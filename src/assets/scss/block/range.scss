@@ -1,0 +1,82 @@
+.accordion__content {
+  position: relative;
+}
+
+.double_range_slider_box {
+  position: relative;
+  width: 143px;
+  height: 15px;
+  margin-top: 20px;
+}
+
+.double_range_slider {
+  width: 100%;
+  height: 1px;
+  position: relative;
+  background-color: $gray;
+}
+
+input[type='range'] {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: none;
+  pointer-events: none;
+  appearance: none;
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+input[type='range']::-webkit-slider-thumb {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: $gray;
+  pointer-events: auto;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.input__values {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.input__wrapper {
+  position: relative;
+}
+
+.value {
+  font-size: 0.9375rem;
+  color: $gray;
+  font-weight: 400;
+  border-radius: 10px;
+  padding: 0 10px;
+  padding-left: 35px;
+  border: 1px rgba(102, 112, 128, 0.3) solid;
+  width: 145px;
+  height: 37px;
+  transition: all 0.3s ease;
+  &:last-child {
+    margin-top: 5px;
+  }
+  &:focus {
+    opacity: 1;
+    outline: none;
+    border: 1px rgba(102, 112, 128, 0.8) solid;
+  }
+
+  &:active {
+  }
+}
+
+.input__separator {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 0.875rem;
+  color: $gray;
+  opacity: 0.5;
+}

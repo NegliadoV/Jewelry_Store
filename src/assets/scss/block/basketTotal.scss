@@ -1,0 +1,78 @@
+.basket__total-container {
+  width: 372px;
+  padding: 30px 35px;
+}
+.basket__total {
+  display: flex;
+  justify-content: space-between;
+  @include text__black;
+  margin-bottom: 27px;
+}
+.total__text {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.total__price-amount {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.basket__length {
+  display: flex;
+  justify-content: space-between;
+  @include text__gray;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.total__products {
+}
+.total__price-noAmount {
+}
+.total__sale {
+  display: flex;
+  justify-content: space-between;
+  @include text__gray;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.total__sale-text {
+}
+.total__sale-amount {
+}
+.total__delivery {
+  display: flex;
+  justify-content: space-between;
+  @include text__gray;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.total__delivery-text {
+}
+.total__delivery-amount {
+}
+.total__promo {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+.total__promo-input {
+  width: 100%;
+  border: 1px $gray solid;
+  border-radius: 5px;
+  padding: 15px 8px;
+  transition: all 0.3s ease;
+
+  &::placeholder {
+    @include text__gray;
+    font-size: 0.875rem;
+    font-weight: 400;
+  }
+
+  &:hover {
+    border: 1px $black solid;
+    opacity: 1;
+  }
+
+  &:focus {
+    border: 1px $black solid;
+  }
+}

@@ -1,0 +1,78 @@
+.drawer {
+  display: flex;
+  flex-direction: column;
+}
+.drawer__hide {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  @include text__gray;
+  font-size: 0.75rem;
+  margin-top: 30px;
+  text-decoration: underline;
+  align-items: center;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  &:hover {
+    color: $black;
+    opacity: 1;
+  }
+}
+.close {
+  opacity: 0.6;
+  margin-right: 12px;
+}
+.drawer__body {
+  display: flex;
+  flex-direction: column;
+}
+
+.drawer__accordion {
+  margin: 15px 0;
+  max-width: 100vh;
+}
+
+.input__hide[type='checkbox'] {
+  appearance: none;
+  position: fixed;
+  top: -100vh;
+  left: -100vh;
+
+  & ~ .accordion__content {
+    max-height: 0;
+    transition: all 0.5s ease;
+    overflow: hidden;
+  }
+
+  &:checked ~ .label__hide::after {
+    transform: rotate(180deg);
+  }
+
+  &:checked ~ .accordion__content {
+    max-height: 100%;
+  }
+}
+
+.label__hide {
+  position: relative;
+  cursor: pointer;
+  &::after {
+    position: absolute;
+    top: 10px;
+    right: 120px;
+    background-image: url(/public/arrow.svg);
+    background-repeat: no-repeat;
+    content: '';
+    width: 0.5625rem;
+    height: 0.3125rem;
+    transition: all 0.3s ease;
+  }
+}
+
+.accordion__title {
+  margin-bottom: 20px;
+}
+
+.accordion__content {
+  margin-left: 20px;
+}

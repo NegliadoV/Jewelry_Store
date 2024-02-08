@@ -1,0 +1,31 @@
+@import './vars';
+@import './reset';
+@import './mixins';
+
+html {
+  font-family: 'Inter', sans-serif;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter.ttf') format('truetype');
+  src: url('../fonts/Inter.ttf#madetheartistscript') format('truetype');
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+@import './block/container.scss';
+@import './block/header.scss';
+@import './block/nav.scss';
+@import './block/dropdown.scss';
+@import './block/home.scss';
+@import './block/drawer.scss';
+@import './block/range.scss';
+@import './block/checkbox.scss';
+@import './block/radioSwitch.scss';
+@import './block/products.scss';
+@import './block/cart.scss';
+@import './block/buttons.scss';
+@import './block/basketTotal.scss';

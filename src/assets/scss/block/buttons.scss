@@ -1,0 +1,15 @@
+.button {
+  width: 100%;
+  background-color: $gray;
+  opacity: 0.85;
+  height: 42px;
+  border-radius: 7px;
+  border: none;
+  @include text__black;
+  color: $white;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+}

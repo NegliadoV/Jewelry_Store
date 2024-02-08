@@ -1,0 +1,164 @@
+.items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  justify-content: center;
+  width: 100%;
+}
+
+.basket {
+  opacity: 1;
+  transition: none;
+  cursor: auto;
+}
+
+.basket__top {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.basket__title {
+  @include text__black;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.basket__length {
+  @include text__gray;
+  font-size: 1.625rem;
+}
+
+.basket__products {
+  width: 80%;
+}
+
+.basket__inner {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.basket__filter {
+  display: flex;
+  justify-content: space-between;
+}
+.basket__all-remove {
+  @include text__gray;
+  font-size: 0.75rem;
+  text-decoration: underline;
+}
+
+.basket__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 24px 0 24px 0;
+}
+
+.basket__checkbox {
+  width: 20px;
+}
+
+.basket__item {
+  display: flex;
+  width: 100%;
+}
+
+.basket__img-container {
+}
+.basket__img-wrap {
+  position: relative;
+  margin-left: 15px;
+}
+.basket__sale-percent {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 0.625rem;
+  color: $white;
+  line-height: 1.375rem;
+  font-weight: 400;
+  padding: 0 5px 0 5px;
+  background-color: $gray;
+  border-radius: 5px;
+  text-align: center;
+}
+.basket__img {
+  max-width: 100px;
+  max-height: 100px;
+}
+.basket__info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.basket__title {
+  @include text__black;
+  margin-left: 40px;
+  width: 20%;
+}
+
+.basket__article {
+  @include text__gray;
+}
+.select__ring {
+  display: flex;
+  align-items: center;
+}
+.select {
+}
+.select__option {
+}
+.basket__btn {
+  display: flex;
+  align-items: center;
+}
+
+.btn__increment {
+  background: none;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  background-image: url(/plus.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+  &:last-child {
+    background-image: url(/minus.svg);
+    margin-left: 15px;
+  }
+}
+.btn__number {
+  @include text__gray;
+}
+
+.basket__price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.price {
+  @include text__black;
+}
+.price__sale {
+  @include text__gray;
+  text-decoration: line-through;
+}
+
+.basket__delete {
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+}
+
+.basket__button-img {
+  width: 15px;
+  height: 15px;
+}

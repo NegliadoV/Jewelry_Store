@@ -1,0 +1,65 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5.625rem;
+}
+.logo {
+}
+.logo__text {
+  @include text__black;
+  font-size: 2.0625rem;
+  font-weight: 700;
+  font-family: 'Inter';
+  margin-right: 2.5rem;
+}
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+.nav__link {
+  position: relative;
+  @include text__black;
+  margin-right: 1.875rem;
+  text-align: center;
+
+  &:last-child {
+    margin-right: 0;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 1px;
+    background-color: $black;
+    bottom: 0;
+    left: 0;
+    color: $gray;
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover::before {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+.nav__img {
+  width: 9px;
+  height: 5px;
+  margin: 0;
+  padding: 0;
+}
+
+.basket {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.basket__price {
+}
